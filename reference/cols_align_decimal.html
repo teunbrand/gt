@@ -102,10 +102,9 @@ this type of alignment).</p>
 <p><code>&lt;column-targeting expression&gt;</code> // <em>default:</em> <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code></p>
 <p>The columns for which decimal alignment should be applied. Can either be a
 series of column names provided in <code><a href="https://rdrr.io/r/base/c.html" class="external-link">c()</a></code>, a vector of column indices, or a
-select helper function. Examples of select helper functions include
-<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">ends_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">matches()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/one_of.html" class="external-link">one_of()</a></code>,
-<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">num_range()</a></code>, and <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code>. By default this is set to <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code>
-which means that decimal alignment will be attempted on all columns.</p></dd>
+select helper function (e.g. <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">ends_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains()</a></code>,
+<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">matches()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">num_range()</a></code>, and <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code>). By default this is set to
+<code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code> which means that the decimal alignment affects all columns.</p></dd>
 
 
 <dt>dec_mark</dt>
@@ -122,10 +121,10 @@ is better to use and it will override any value here in <code>dec_mark</code>.</
 <p>An optional locale identifier that can be used to obtain the type of
 decimal mark used in the numeric values to be aligned (according to the
 locale's formatting rules). Examples include <code>"en"</code> for English (United
-States) and <code>"fr"</code> for French (France). We can use the <code><a href="info_locales.html">info_locales()</a></code>
-function as a useful reference for all of the locales that are supported. A
-locale ID can be also set in the initial <code><a href="gt.html">gt()</a></code> function call (where it
-would be used automatically by any function with a <code>locale</code> argument) but a
+States) and <code>"fr"</code> for French (France). We can call <code><a href="info_locales.html">info_locales()</a></code> for a
+useful reference for all of the locales that are supported. A locale ID can
+be also set in the initial <code><a href="gt.html">gt()</a></code> function call (where it would be used
+automatically by any function with a <code>locale</code> argument) but a
 <code>locale</code> value provided here will override that global locale.</p></dd>
 
 </dl></div>

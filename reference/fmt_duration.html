@@ -119,9 +119,8 @@ from weeks to seconds.</p>
 <dd><p><em>Columns to target</em></p>
 <p><code>&lt;column-targeting expression&gt;</code> // <em>default:</em> <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code></p>
 <p>Can either be a series of column names provided in <code><a href="https://rdrr.io/r/base/c.html" class="external-link">c()</a></code>, a vector of
-column indices, or a select helper function. Examples of select helper
-functions include <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">ends_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains()</a></code>,
-<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">matches()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/one_of.html" class="external-link">one_of()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">num_range()</a></code>, and <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code>.</p></dd>
+column indices, or a select helper function (e.g. <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with()</a></code>,
+<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">ends_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">matches()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">num_range()</a></code> and <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code>).</p></dd>
 
 
 <dt>rows</dt>
@@ -131,10 +130,9 @@ functions include <code><a href="https://tidyselect.r-lib.org/reference/starts_w
 undergo formatting. The default <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code> results in all rows in
 <code>columns</code> being formatted. Alternatively, we can supply a vector of row
 captions within <code><a href="https://rdrr.io/r/base/c.html" class="external-link">c()</a></code>, a vector of row indices, or a select helper
-function. Examples of select helper functions include <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with()</a></code>,
-<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">ends_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">matches()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/one_of.html" class="external-link">one_of()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">num_range()</a></code>, and
-<code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code>. We can also use expressions to filter down to the rows we
-need (e.g., <code>[colname_1] &gt; 100 &amp; [colname_2] &lt; 50</code>).</p></dd>
+function (e.g. <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">ends_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">matches()</a></code>,
+<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">num_range()</a></code>, and <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code>). We can also use expressions to filter
+down to the rows we need (e.g., <code>[colname_1] &gt; 100 &amp; [colname_2] &lt; 50</code>).</p></dd>
 
 
 <dt>input_units</dt>
@@ -246,11 +244,11 @@ crore, and higher quantities.</p></dd>
 <p><code>scalar&lt;character&gt;</code> // <em>default:</em> <code>NULL</code> (<code>optional</code>)</p>
 <p>An optional locale identifier that can be used for formatting values
 according the locale's rules. Examples include <code>"en"</code> for English (United
-States) and <code>"fr"</code> for French (France). We can use the <code><a href="info_locales.html">info_locales()</a></code>
-function as a useful reference for all of the locales that are supported. A
-locale ID can be also set in the initial <code><a href="gt.html">gt()</a></code> function call (where it
-would be used automatically by any function with a <code>locale</code> argument) but a
-<code>locale</code> value provided here will override that global locale.</p></dd>
+States) and <code>"fr"</code> for French (France). We can call <code><a href="info_locales.html">info_locales()</a></code> for a
+useful reference for all of the locales that are supported. A locale ID can
+be also set in the initial <code><a href="gt.html">gt()</a></code> function call (where it would be used
+automatically by any function with a <code>locale</code> argument) but a <code>locale</code>
+value provided here will override that global locale.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -283,11 +281,10 @@ which is <code>c("days", "hours", "minutes", "seconds")</code></p>
     
 
 
-<p>The <code>fmt_duration()</code> formatting function is compatible with body cells that
-are of the <code>"numeric"</code>, <code>"integer"</code>, or <code>"difftime"</code> types. Any other types
-of body cells are ignored during formatting. This is to say that cells of
-incompatible data types may be targeted, but there will be no attempt to
-format them.</p>
+<p><code>fmt_duration()</code> is compatible with body cells that are of the <code>"numeric"</code>,
+<code>"integer"</code>, or <code>"difftime"</code> types. Any other types of body cells are ignored
+during formatting. This is to say that cells of incompatible data types may
+be targeted, but there will be no attempt to format them.</p>
     </div>
     <div class="section level2">
     <h2 id="targeting-cells-with-columns-and-rows">Targeting cells with <code>columns</code> and <code>rows</code><a class="anchor" aria-label="anchor" href="#targeting-cells-with-columns-and-rows"></a></h2>
@@ -341,8 +338,8 @@ values.</p>
 <p>Note that a <code>locale</code> value provided here will override any global locale
 setting performed in <code><a href="gt.html">gt()</a></code>'s own <code>locale</code> argument (it is settable there as
 a value received by all other functions that have a <code>locale</code> argument). As a
-useful reference on which locales are supported, we can use the
-<code><a href="info_locales.html">info_locales()</a></code> function to view an info table.</p>
+useful reference on which locales are supported, we can call <code><a href="info_locales.html">info_locales()</a></code>
+to view an info table.</p>
     </div>
     <div class="section level2">
     <h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a></h2>
@@ -411,6 +408,7 @@ number of days since March 30, 2020.</p>
 <code><a href="fmt_roman.html">fmt_roman</a>()</code>,
 <code><a href="fmt_scientific.html">fmt_scientific</a>()</code>,
 <code><a href="fmt_spelled_num.html">fmt_spelled_num</a>()</code>,
+<code><a href="fmt_tf.html">fmt_tf</a>()</code>,
 <code><a href="fmt_time.html">fmt_time</a>()</code>,
 <code><a href="fmt_units.html">fmt_units</a>()</code>,
 <code><a href="fmt_url.html">fmt_url</a>()</code>,

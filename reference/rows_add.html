@@ -120,10 +120,10 @@ exists in the table. Two-sided formulas with column-resolving expressions
 (e.g, <code>&lt;expr&gt; ~ &lt;value vector&gt;</code>) can also be used, where the left-hand side
 corresponds to selections of columns. Column names should be enclosed in
 <code><a href="https://rdrr.io/r/base/c.html" class="external-link">c()</a></code> and select helpers like <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">ends_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains()</a></code>,
-<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">matches()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/one_of.html" class="external-link">one_of()</a></code>, and <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code> can be used in the LHS. The
-length of the longest vector in <code>&lt;value vector&gt;</code> determines how many new
-rows will be added. Single values in <code>&lt;value vector&gt;</code> will be repeated down
-in cases where there are multiple rows to be added.</p></dd>
+<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">matches()</a></code>, and <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code> can be used in the LHS. The length of the
+longest vector in <code>&lt;value vector&gt;</code> determines how many new rows will be added.
+Single values in <code>&lt;value vector&gt;</code> will be repeated down in cases where
+there are multiple rows to be added.</p></dd>
 
 
 <dt>.list</dt>
@@ -256,20 +256,20 @@ of each row group:</p>
 <span>  <span class="fu"><a href="../reference/opt_vertical_padding.html">opt_vertical_padding</a></span><span class="op">(</span>scale <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre><p></p></div>
 <p><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/man_rows_add_4.png" alt="This image of a table was generated from the fourth code example in the `rows_add()` help file." style="width:100%;"></p>
 <p>All missing values were substituted with an empty string (<code>""</code>), and that was
-done by using the <code><a href="sub_missing.html">sub_missing()</a></code> function. We removed the top border of the
+done by using <code><a href="sub_missing.html">sub_missing()</a></code>. We removed the top border of the
 new rows with a call to <code><a href="tab_style.html">tab_style()</a></code>, targeting those rows where the row
 labels end with <code>"end"</code>. Finally, we get rid of the row labels with the use
-of the <code><a href="text_case_when.html">text_case_when()</a></code> function, using a similar strategy of targeting the
+of <code><a href="text_case_when.html">text_case_when()</a></code>, using a similar strategy of targeting the
 name of the row label.</p>
 <p>Another application is starting from nothing (really just the definition of
 columns) and building up a table using several invocations of <code>rows_add()</code>.
 This might be useful in interactive or programmatic applications. Here's an
-example where two columns are defined with <strong>dplyr</strong>'s <code>tibble()</code> function
+example where two columns are defined with <code><a href="https://tibble.tidyverse.org/reference/tibble.html" class="external-link">dplyr::tibble()</a></code>
 (and no rows are present initially); with two calls of <code>rows_add()</code>, two
 separate rows are added.</p>
 <p></p><div class="sourceCode r"><pre><code><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html" class="external-link">tibble</a></span><span class="op">(</span></span>
 <span>  time <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/posix_utils.html" class="external-link">POSIXct</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  event <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span></span>
+<span>  event <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></span><span class="op">(</span><span class="fl">0L</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="../reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="../reference/rows_add.html">rows_add</a></span><span class="op">(</span></span>
@@ -338,9 +338,9 @@ to create a complete, new row).</p>
 actual rows. With this type of multi-column, zero-row table, one needs to use
 a subset of the columns when generating new rows through <code>rows_add()</code>.</p>
 <p></p><div class="sourceCode r"><pre><code><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html" class="external-link">tibble</a></span><span class="op">(</span></span>
-<span>  msrp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span>,</span>
-<span>  item <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span>,</span>
-<span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span></span>
+<span>  msrp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a></span><span class="op">(</span><span class="fl">0L</span><span class="op">)</span>,</span>
+<span>  item <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></span><span class="op">(</span><span class="fl">0L</span><span class="op">)</span>,</span>
+<span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></span><span class="op">(</span><span class="fl">0L</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="../reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="../reference/rows_add.html">rows_add</a></span><span class="op">(</span></span>

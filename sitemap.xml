@@ -202,6 +202,9 @@
     <loc>https://gt.rstudio.com/reference/extract_summary.html</loc>
   </url>
   <url>
+    <loc>https://gt.rstudio.com/reference/films.html</loc>
+  </url>
+  <url>
     <loc>https://gt.rstudio.com/reference/fmt.html</loc>
   </url>
   <url>
@@ -283,6 +286,9 @@
     <loc>https://gt.rstudio.com/reference/fmt_spelled_num.html</loc>
   </url>
   <url>
+    <loc>https://gt.rstudio.com/reference/fmt_tf.html</loc>
+  </url>
+  <url>
     <loc>https://gt.rstudio.com/reference/fmt_time.html</loc>
   </url>
   <url>
@@ -296,6 +302,9 @@
   </url>
   <url>
     <loc>https://gt.rstudio.com/reference/ggplot_image.html</loc>
+  </url>
+  <url>
+    <loc>https://gt.rstudio.com/reference/gibraltar.html</loc>
   </url>
   <url>
     <loc>https://gt.rstudio.com/reference/google_font.html</loc>
@@ -385,7 +394,13 @@
     <loc>https://gt.rstudio.com/reference/info_time_style.html</loc>
   </url>
   <url>
+    <loc>https://gt.rstudio.com/reference/info_unit_conversions.html</loc>
+  </url>
+  <url>
     <loc>https://gt.rstudio.com/reference/local_image.html</loc>
+  </url>
+  <url>
+    <loc>https://gt.rstudio.com/reference/location-helper.html</loc>
   </url>
   <url>
     <loc>https://gt.rstudio.com/reference/md.html</loc>
@@ -395,6 +410,9 @@
   </url>
   <url>
     <loc>https://gt.rstudio.com/reference/nanoplot_options.html</loc>
+  </url>
+  <url>
+    <loc>https://gt.rstudio.com/reference/nuclides.html</loc>
   </url>
   <url>
     <loc>https://gt.rstudio.com/reference/opt_align_table_header.html</loc>
@@ -437,6 +455,9 @@
   </url>
   <url>
     <loc>https://gt.rstudio.com/reference/pct.html</loc>
+  </url>
+  <url>
+    <loc>https://gt.rstudio.com/reference/peeps.html</loc>
   </url>
   <url>
     <loc>https://gt.rstudio.com/reference/photolysis.html</loc>
@@ -587,6 +608,9 @@
   </url>
   <url>
     <loc>https://gt.rstudio.com/reference/towny.html</loc>
+  </url>
+  <url>
+    <loc>https://gt.rstudio.com/reference/unit_conversion.html</loc>
   </url>
   <url>
     <loc>https://gt.rstudio.com/reference/vec_fmt_bytes.html</loc>
