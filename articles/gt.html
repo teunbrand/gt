@@ -12,10 +12,10 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
-<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
 <meta property="og:title" content="Introduction to Creating gt Tables">
 </head>
@@ -23,11 +23,11 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top " aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="../index.html">gt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.11.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.11.1.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,16 +41,23 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/case-study-clinical-tables.html">Case Study: Clinical Tables</a></li>
+<li><a class="dropdown-item" href="../articles/creating-summary-lines.html">Creating Summary Lines</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Case studies</h6></li>
     <li><a class="dropdown-item" href="../articles/case-study-gtcars.html">Case Study: gtcars</a></li>
-    <li><a class="dropdown-item" href="../articles/creating-summary-lines.html">Creating Summary Lines</a></li>
+    <li><a class="dropdown-item" href="../articles/case-study-clinical-tables.html">Case Study: Clinical Tables</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Datasets</h6></li>
     <li><a class="dropdown-item" href="../articles/gt-datasets.html">gt Datasets</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
   </ul>
 </li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-news" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">News</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-news">
 <li><h6 class="dropdown-header" data-toc-skip>Releases</h6></li>
+    <li><a class="external-link dropdown-item" href="https://posit.co/blog/everything-new-thats-in-gt-0-11-0/">Version 0.11.0</a></li>
     <li><a class="external-link dropdown-item" href="https://posit.co/blog/new-features-in-gt-0-10-0/">Version 0.10.0</a></li>
     <li><a class="external-link dropdown-item" href="https://posit.co/blog/?search=gt%2520%25200.9.0">Version 0.9.0</a></li>
     <li><a class="external-link dropdown-item" href="https://posit.co/blog/new-features-upgrades-in-gt-0-8-0/">Version 0.8.0</a></li>
@@ -66,6 +73,14 @@
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/rstudio/gt/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-lightswitch" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Light switch"><span class="fa fa-sun"></span></button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-lightswitch">
+<li><button class="dropdown-item" data-bs-theme-value="light"><span class="fa fa-sun"></span> Light</button></li>
+    <li><button class="dropdown-item" data-bs-theme-value="dark"><span class="fa fa-moon"></span> Dark</button></li>
+    <li><button class="dropdown-item" data-bs-theme-value="auto"><span class="fa fa-adjust"></span> Auto</button></li>
+  </ul>
+</li>
       </ul>
 </div>
 
@@ -2242,7 +2257,7 @@ supply (1) a vector of colnames or rownames, (2) a vector of column/row
 indices, (3) bare column names wrapped in <code><a href="https://rdrr.io/r/base/c.html" class="external-link">c()</a></code> or row labels
 within <code><a href="https://rdrr.io/r/base/c.html" class="external-link">c()</a></code>, or (4) a select helper function
 (<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">ends_with()</a></code>,
-<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">matches()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/one_of.html" class="external-link">one_of()</a></code>,
+<code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">contains()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">matches()</a></code>, <code><a href="https://tidyselect.r-lib.org/reference/all_of.html" class="external-link">all_of()</a></code>,
 and <code><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything()</a></code>). For <code>rows</code> specifically, we
 can use a conditional statement with column names as variables (e.g.,
 <code>size &gt; 15000</code>).</p>
@@ -2734,12 +2749,12 @@ cell. Let’s add a footnote that references the
 <td headers="size" class="gt_row gt_right">11506</td>
 </tr>
 <tr>
-<td headers="name" class="gt_row gt_left">North America<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span>
+<td headers="name" class="gt_row gt_left">North America<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span>
 </td>
 <td headers="size" class="gt_row gt_right">9390</td>
 </tr>
 <tr>
-<td headers="name" class="gt_row gt_left">South America<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span>
+<td headers="name" class="gt_row gt_left">South America<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span>
 </td>
 <td headers="size" class="gt_row gt_right">6795</td>
 </tr>
@@ -2778,7 +2793,7 @@ cell. Let’s add a footnote that references the
 </tfoot>
 <tfoot class="gt_footnotes"><tr>
 <td class="gt_footnote" colspan="2">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span> The Americas.</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> The Americas.</td>
     </tr></tfoot>
 </table>
 </div>
@@ -3288,19 +3303,19 @@ supplying a conditional statement that gets the lowest population.</p>
 <tr>
 <td headers="name" class="gt_row gt_left">Asia</td>
 <td headers="size" class="gt_row gt_right">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span> 16988</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> 16988</td>
 </tr>
 <tr>
 <td headers="name" class="gt_row gt_left">Africa</td>
 <td headers="size" class="gt_row gt_right">11506</td>
 </tr>
 <tr>
-<td headers="name" class="gt_row gt_left">North America<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>2</sup></span>
+<td headers="name" class="gt_row gt_left">North America<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span>
 </td>
 <td headers="size" class="gt_row gt_right">9390</td>
 </tr>
 <tr>
-<td headers="name" class="gt_row gt_left">South America<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>2</sup></span>
+<td headers="name" class="gt_row gt_left">South America<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span>
 </td>
 <td headers="size" class="gt_row gt_right">6795</td>
 </tr>
@@ -3327,7 +3342,7 @@ supplying a conditional statement that gets the lowest population.</p>
 <tr>
 <td headers="name" class="gt_row gt_left">Borneo</td>
 <td headers="size" class="gt_row gt_right">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>3</sup></span> 280</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>3</sup></span> 280</td>
 </tr>
 </tbody>
 <tfoot class="gt_sourcenotes">
@@ -3341,16 +3356,16 @@ supplying a conditional statement that gets the lowest population.</p>
 <tfoot class="gt_footnotes">
 <tr>
 <td class="gt_footnote" colspan="2">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span> <span class="gt_from_md">The <strong>largest</strong> by area.</span>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> <span class="gt_from_md">The <strong>largest</strong> by area.</span>
 </td>
     </tr>
 <tr>
 <td class="gt_footnote" colspan="2">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>2</sup></span> The Americas.</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> The Americas.</td>
     </tr>
 <tr>
 <td class="gt_footnote" colspan="2">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>3</sup></span> The lowest by area.</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>3</sup></span> The lowest by area.</td>
     </tr>
 </tfoot>
 </table>
@@ -3841,7 +3856,7 @@ making <em>row labels</em>. Let’s add a stub with our
 </style>
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead><tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="size">size</th>
     </tr></thead>
 <tbody class="gt_table_body">
@@ -4352,7 +4367,7 @@ That’s the <strong>stub</strong>. We can apply what’s known as a
 </style>
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead><tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="landmass">landmass</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub">landmass</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="size">size</th>
     </tr></thead>
 <tbody class="gt_table_body">
@@ -4894,7 +4909,7 @@ footnotes) we use the following statements:</p>
 <td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>The top ten largest are presented</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="landmass">landmass</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub">landmass</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="size">size</th>
     </tr>
 </thead>
@@ -4902,7 +4917,7 @@ footnotes) we use the following statements:</p>
 <tr>
 <th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">Asia</th>
 <td headers="stub_1_1 size" class="gt_row gt_right">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span> 16988</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> 16988</td>
 </tr>
 <tr>
 <th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">Africa</th>
@@ -4919,7 +4934,7 @@ footnotes) we use the following statements:</p>
 <tr>
 <th id="stub_1_5" scope="row" class="gt_row gt_left gt_stub">Antarctica</th>
 <td headers="stub_1_5 size" class="gt_row gt_right">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>2</sup></span> 5500</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> 5500</td>
 </tr>
 <tr>
 <th id="stub_1_6" scope="row" class="gt_row gt_left gt_stub">Europe</th>
@@ -4953,12 +4968,12 @@ footnotes) we use the following statements:</p>
 <tfoot class="gt_footnotes">
 <tr>
 <td class="gt_footnote" colspan="2">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span> <span class="gt_from_md">The <strong>largest</strong> by area.</span>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> <span class="gt_from_md">The <strong>largest</strong> by area.</span>
 </td>
     </tr>
 <tr>
 <td class="gt_footnote" colspan="2">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>2</sup></span> The lowest by population.</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> The lowest by population.</td>
     </tr>
 </tfoot>
 </table>
@@ -5453,7 +5468,7 @@ names/indices, select helpers, etc.).</p>
 <td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>The top ten largest are presented</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="landmass">landmass</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub">landmass</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="size">size</th>
     </tr>
 </thead>
@@ -5486,7 +5501,7 @@ names/indices, select helpers, etc.).</p>
 <tr class="gt_row_group_first">
 <th id="stub_1_5" scope="row" class="gt_row gt_left gt_stub">Asia</th>
 <td headers="continent stub_1_5 size" class="gt_row gt_right">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span> 16988</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> 16988</td>
 </tr>
 <tr>
 <th id="stub_1_6" scope="row" class="gt_row gt_left gt_stub">Africa</th>
@@ -5503,7 +5518,7 @@ names/indices, select helpers, etc.).</p>
 <tr>
 <th id="stub_1_9" scope="row" class="gt_row gt_left gt_stub">Antarctica</th>
 <td headers="continent stub_1_9 size" class="gt_row gt_right">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>2</sup></span> 5500</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> 5500</td>
 </tr>
 <tr>
 <th id="stub_1_10" scope="row" class="gt_row gt_left gt_stub">Europe</th>
@@ -5521,12 +5536,12 @@ names/indices, select helpers, etc.).</p>
 <tfoot class="gt_footnotes">
 <tr>
 <td class="gt_footnote" colspan="2">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span> <span class="gt_from_md">The <strong>largest</strong> by area.</span>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> <span class="gt_from_md">The <strong>largest</strong> by area.</span>
 </td>
     </tr>
 <tr>
 <td class="gt_footnote" colspan="2">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>2</sup></span> The lowest by population.</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> The lowest by population.</td>
     </tr>
 </tfoot>
 </table>
@@ -6077,10 +6092,10 @@ with <code><a href="../reference/tab_spanner.html">tab_spanner()</a></code>.</p>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
 <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4" scope="colgroup" id="Measurement">
-        <span class="gt_column_spanner">Measurement</span>
+        <div class="gt_column_spanner">Measurement</div>
       </th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="Time">
-        <span class="gt_column_spanner">Time</span>
+        <div class="gt_column_spanner">Time</div>
       </th>
     </tr>
 <tr class="gt_col_headings">
@@ -6672,21 +6687,21 @@ with <code><a href="../reference/tab_spanner.html">tab_spanner()</a></code>.</p>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
 <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="Time">
-        <span class="gt_column_spanner">Time</span>
+        <div class="gt_column_spanner">Time</div>
       </th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4" scope="colgroup" id="Measurement">
-        <span class="gt_column_spanner">Measurement</span>
+        <div class="gt_column_spanner">Measurement</div>
       </th>
     </tr>
 <tr class="gt_col_headings">
 <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Year">Year</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Month">Month</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Day">Day</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Ozone,&lt;br&gt;ppbV">Ozone,<br>ppbV</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Solar R.,&lt;br&gt;cal/m&lt;sup&gt;2&lt;/sup&gt;">Solar R.,<br>cal/m<sup>2</sup>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Ozone">Ozone,<br>ppbV</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Solar.R">Solar R.,<br>cal/m<sup>2</sup>
 </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Wind,&lt;br&gt;mph">Wind,<br>mph</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Temp,&lt;br&gt;&amp;deg;F">Temp,<br>°F</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Wind">Wind,<br>mph</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Temp">Temp,<br>°F</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -6809,7 +6824,7 @@ HTML entity (<code>&amp;deg;</code>).</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>

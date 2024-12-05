@@ -12,10 +12,10 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
-<script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="lightswitch.js"></script><script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
-<link href="deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
 <meta property="og:title" content="Easily Create Presentation-Ready Display Tables">
 <meta name="description" content="Build display tables from tabular data with an easy-to-use set of functions. With its progressive approach, we can construct display tables with a cohesive set of table parts. Table values can be formatted using any of the included formatting functions. Footnotes and cell styles can be precisely added through a location targeting system. The way in which gt handles things for you means that you don't often have to worry about the fine details.">
@@ -26,11 +26,11 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top " aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="index.html">gt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.11.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.11.1.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,16 +44,23 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="articles/case-study-clinical-tables.html">Case Study: Clinical Tables</a></li>
+<li><a class="dropdown-item" href="articles/creating-summary-lines.html">Creating Summary Lines</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Case studies</h6></li>
     <li><a class="dropdown-item" href="articles/case-study-gtcars.html">Case Study: gtcars</a></li>
-    <li><a class="dropdown-item" href="articles/creating-summary-lines.html">Creating Summary Lines</a></li>
+    <li><a class="dropdown-item" href="articles/case-study-clinical-tables.html">Case Study: Clinical Tables</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Datasets</h6></li>
     <li><a class="dropdown-item" href="articles/gt-datasets.html">gt Datasets</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="articles/index.html">More articles...</a></li>
   </ul>
 </li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-news" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">News</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-news">
 <li><h6 class="dropdown-header" data-toc-skip>Releases</h6></li>
+    <li><a class="external-link dropdown-item" href="https://posit.co/blog/everything-new-thats-in-gt-0-11-0/">Version 0.11.0</a></li>
     <li><a class="external-link dropdown-item" href="https://posit.co/blog/new-features-in-gt-0-10-0/">Version 0.10.0</a></li>
     <li><a class="external-link dropdown-item" href="https://posit.co/blog/?search=gt%2520%25200.9.0">Version 0.9.0</a></li>
     <li><a class="external-link dropdown-item" href="https://posit.co/blog/new-features-upgrades-in-gt-0-8-0/">Version 0.8.0</a></li>
@@ -69,6 +76,14 @@
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/rstudio/gt/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-lightswitch" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Light switch"><span class="fa fa-sun"></span></button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-lightswitch">
+<li><button class="dropdown-item" data-bs-theme-value="light"><span class="fa fa-sun"></span> Light</button></li>
+    <li><button class="dropdown-item" data-bs-theme-value="dark"><span class="fa fa-moon"></span> Dark</button></li>
+    <li><button class="dropdown-item" data-bs-theme-value="auto"><span class="fa fa-adjust"></span> Auto</button></li>
+  </ul>
+</li>
       </ul>
 </div>
 
@@ -120,13 +135,18 @@
 <div align="center">
 <p><img src="reference/figures/gt_sp500_table.svg" width="800px"></p>
 </div>
-<p>There are twelve datasets provided by <strong>gt</strong>: <code>countrypops</code>, <code>sza</code>, <code>gtcars</code>, <code>sp500</code>, <code>pizzaplace</code>, <code>exibble</code>, <code>towny</code>, <code>metro</code>, <code>constants</code>, <code>illness</code>, <code>rx_adsl</code>, and <code>rx_addv</code>.</p>
+<p><br></p>
+<p>There are 18 datasets provided by <strong>gt</strong>: <code>countrypops</code>, <code>sza</code>, <code>gtcars</code>, <code>sp500</code>, <code>pizzaplace</code>, <code>exibble</code>, <code>towny</code>, <code>peeps</code>, <code>films</code>, <code>metro</code>, <code>gibraltar</code>, <code>constants</code>, <code>illness</code>, <code>reactions</code>, <code>photolysis</code>, <code>nuclides</code>, <code>rx_adsl</code>, and <code>rx_addv</code>.</p>
 <div align="center" style="padding-top:20px">
 <p><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_countrypops.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_sza.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_gtcars.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_sp500.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_pizzaplace.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_exibble.svg" style="width:15%;"></p>
 </div>
-<div align="center" style="padding-bottom:20px">
-<p><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_towny.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_metro.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_constants.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_illness.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_rx_adsl.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_rx_addv.svg" style="width:15%;"></p>
+<div align="center" style="padding-top:10px;padding-bottom:10px">
+<p><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_towny.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_peeps.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_films.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_metro.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_gibraltar.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_constants.svg" style="width:15%;"></p>
 </div>
+<div align="center" style="padding-bottom:20px">
+<p><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_illness.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_reactions.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_photolysis.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_nuclides.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_rx_adsl.svg" style="width:15%;"><img src="https://raw.githubusercontent.com/rstudio/gt/master/images/dataset_rx_addv.svg" style="width:15%;"></p>
+</div>
+<p><br></p>
 <p>All of this tabular data is great for experimenting with <strong>gt</strong>’s functions and we make extensive use of these datasets in our documentation.</p>
 <p>Beyond the functions shown in the simple <code>sp500</code>-based example, there are many functions available in <strong>gt</strong> for creating super-customized tables. Check out the <a href="https://gt.rstudio.com/">documentation website</a> to get started via introductory articles for making <strong>gt</strong> tables. There’s a handy <em>Reference</em> section that has detailed help for every function in the package.</p>
 <p><a href="https://gt.rstudio.com/"><img src="https://img.shields.io/badge/Project%20Website-Documentation%20and%20Reference-blue?style=social" alt="Documentation Site"></a></p>
@@ -142,7 +162,7 @@
 <p><a href="https://github.com/rstudio/gt/discussions" class="external-link"><img src="https://img.shields.io/badge/GitHub%20Discussions-Ask%20about%20anything-blue?style=social&amp;logo=github&amp;logoColor=gray" alt="GitHub Discussions"></a></p>
 <p>Another fine venue for discussion is in the <a href="https://discord.com/invite/Ux7nrcXHVV" class="external-link"><code>gt_package</code> <em>Discord server</em></a>. This is a good option for asking about the development of <strong>gt</strong>, pitching ideas that may become features, and sharing your table creations!</p>
 <p><a href="https://discord.com/invite/Ux7nrcXHVV" class="external-link"><img src="https://img.shields.io/badge/Discord-Chat%20with%20us-blue?style=social&amp;logo=discord&amp;logoColor=purple" alt="Discord Server"></a></p>
-<p>Finally, there is the <a href="https://twitter.com/gt_package" class="external-link"><code>gt_package</code> <em>Twitter account</em></a>. There you’ll find tweets about <strong>gt</strong> (including sneak previews about in-development features) and other table-generation packages.</p>
+<p>Finally, there is the <a href="https://twitter.com/gt_package" class="external-link"><code>gt_package</code> <em>X/Twitter account</em></a>. There you’ll find tweets about <strong>gt</strong> (including sneak previews about in-development features) and other table-generation packages.</p>
 <p><a href="https://twitter.com/gt_package" class="external-link"><img src="https://img.shields.io/twitter/follow/gt_package?style=social" alt="Twitter Follow"></a></p>
 <p>These are all great places to ask questions about how to use the package, discuss some ideas, engage with others, and much more!</p>
 <div class="section level2">
@@ -257,7 +277,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>

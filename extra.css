@@ -25,7 +25,6 @@ h4, .h4 {
 }
 
 dt {
-  color: rgb(38, 38, 38);
   text-decoration: underline;
   text-decoration-style: solid;
   text-underline-offset: 4px;
@@ -76,4 +75,8 @@ dd > p:nth-child(1) {
 
 dd > p:nth-child(2) {
   margin-left: -6px !important;
+}
+
+.row > main {
+  hyphens: none;
 }

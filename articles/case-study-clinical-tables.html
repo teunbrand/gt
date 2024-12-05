@@ -12,10 +12,10 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
-<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
 <meta property="og:title" content="Case Study: Clinical Tables">
 </head>
@@ -23,11 +23,11 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top " aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="../index.html">gt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.11.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.11.1.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,16 +41,23 @@
 <li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/case-study-clinical-tables.html">Case Study: Clinical Tables</a></li>
+<li><a class="dropdown-item" href="../articles/creating-summary-lines.html">Creating Summary Lines</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Case studies</h6></li>
     <li><a class="dropdown-item" href="../articles/case-study-gtcars.html">Case Study: gtcars</a></li>
-    <li><a class="dropdown-item" href="../articles/creating-summary-lines.html">Creating Summary Lines</a></li>
+    <li><a class="dropdown-item" href="../articles/case-study-clinical-tables.html">Case Study: Clinical Tables</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Datasets</h6></li>
     <li><a class="dropdown-item" href="../articles/gt-datasets.html">gt Datasets</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
   </ul>
 </li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-news" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">News</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-news">
 <li><h6 class="dropdown-header" data-toc-skip>Releases</h6></li>
+    <li><a class="external-link dropdown-item" href="https://posit.co/blog/everything-new-thats-in-gt-0-11-0/">Version 0.11.0</a></li>
     <li><a class="external-link dropdown-item" href="https://posit.co/blog/new-features-in-gt-0-10-0/">Version 0.10.0</a></li>
     <li><a class="external-link dropdown-item" href="https://posit.co/blog/?search=gt%2520%25200.9.0">Version 0.9.0</a></li>
     <li><a class="external-link dropdown-item" href="https://posit.co/blog/new-features-upgrades-in-gt-0-8-0/">Version 0.8.0</a></li>
@@ -66,6 +73,14 @@
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/rstudio/gt/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-lightswitch" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Light switch"><span class="fa fa-sun"></span></button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-lightswitch">
+<li><button class="dropdown-item" data-bs-theme-value="light"><span class="fa fa-sun"></span> Light</button></li>
+    <li><button class="dropdown-item" data-bs-theme-value="dark"><span class="fa fa-moon"></span> Dark</button></li>
+    <li><button class="dropdown-item" data-bs-theme-value="auto"><span class="fa fa-adjust"></span> Auto</button></li>
+  </ul>
+</li>
       </ul>
 </div>
 
@@ -164,7 +179,7 @@ to create a tibble with the shape of our desired table and then use
 <span>      <span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>      <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>label <span class="op">=</span> <span class="op">!</span><span class="op">!</span><span class="va">sum_var</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>      <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span>
-<span>        <span class="fu">across</span><span class="op">(</span><span class="fu">where</span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span>, <span class="fl">0</span>, <span class="va">.</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>        <span class="fu">across</span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html" class="external-link">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span>, <span class="fl">0</span>, <span class="va">.</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>        category <span class="op">=</span> <span class="va">category_lbl</span></span>
 <span>      <span class="op">)</span></span>
 <span></span>
@@ -698,17 +713,17 @@ give our table a nice title and subtitle.</p>
 <td colspan="11" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Demographic Characteristics - ITT Analysis Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Placebo">val_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Drug 1">val_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Drug-1">val_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="sd_Placebo">sd_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="sd_Drug 1">sd_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="sd_Drug-1">sd_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="min_Placebo">min_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="min_Drug 1">min_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="min_Drug-1">min_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="max_Placebo">max_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="max_Drug 1">max_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="max_Drug-1">max_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Placebo">pct_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug 1">pct_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug-1">pct_Drug 1</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -1426,17 +1441,17 @@ pattern in the next step.</p>
 <td colspan="11" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Demographic Characteristics - ITT Analysis Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Placebo">val_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Drug 1">val_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Drug-1">val_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="sd_Placebo">sd_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="sd_Drug 1">sd_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="sd_Drug-1">sd_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="min_Placebo">min_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="min_Drug 1">min_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="min_Drug-1">min_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="max_Placebo">max_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="max_Drug 1">max_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="max_Drug-1">max_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Placebo">pct_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug 1">pct_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug-1">pct_Drug 1</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -2142,9 +2157,9 @@ argument to specify our custom merging pattern.</p>
 <td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Demographic Characteristics - ITT Analysis Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Placebo">val_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Drug 1">val_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Drug-1">val_Drug 1</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -2732,9 +2747,9 @@ the title with <code><a href="../reference/opt_align_table_header.html">opt_alig
 <td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Demographic Characteristics - ITT Analysis Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Placebo">val_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Drug 1">val_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="val_Drug-1">val_Drug 1</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -3301,7 +3316,7 @@ and align all values to the center, making use of
   height: 0px !important;
 }
 </style>
-<table class="table gt_table" style="table-layout: fixed;; width: 0px" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="table gt_table" style="table-layout:fixed;width:0px;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width:250px;">
 <col style="width:200px;">
@@ -3315,9 +3330,9 @@ and align all values to the center, making use of
 <td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Demographic Characteristics - ITT Analysis Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="val_Placebo">val_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="val_Drug 1">val_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="val_Drug-1">val_Drug 1</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -3893,7 +3908,7 @@ our new column labels in a named list.</p>
   height: 0px !important;
 }
 </style>
-<table class="table gt_table" style="table-layout: fixed;; width: 0px" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="table gt_table" style="table-layout:fixed;width:0px;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width:250px;">
 <col style="width:200px;">
@@ -3907,9 +3922,9 @@ our new column labels in a named list.</p>
 <td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Demographic Characteristics - ITT Analysis Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Placebo N=90 (100%)">Placebo N=90 (100%)</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Drug 1 N=90 (100%)">Drug 1 N=90 (100%)</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="val_Placebo">Placebo N=90 (100%)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="val_Drug-1">Drug 1 N=90 (100%)</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -4562,17 +4577,17 @@ again.</p>
 <td colspan="14" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Occurence of Event per Subgroup - {gt} Analysis Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Age Group">Age Group</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="AAGEGR1">Age Group</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Placebo">n_resp_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Drug 1">n_resp_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Drug-1">n_resp_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_total_Placebo">n_total_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_total_Drug 1">n_total_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_total_Drug-1">n_total_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Placebo">pct_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug 1">pct_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug-1">pct_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_up_Placebo">ci_up_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_up_Drug 1">ci_up_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_up_Drug-1">ci_up_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Placebo">ci_low_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Drug 1">ci_low_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Drug-1">ci_low_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="or">or</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="or_ci_low">or_ci_low</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="or_ci_up">or_ci_up</th>
@@ -5085,17 +5100,17 @@ as numbers with two decimals, in both cases using
 <td colspan="14" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Occurence of Event per Subgroup - {gt} Analysis Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Age Group">Age Group</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="AAGEGR1">Age Group</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Placebo">n_resp_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Drug 1">n_resp_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Drug-1">n_resp_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_total_Placebo">n_total_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_total_Drug 1">n_total_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_total_Drug-1">n_total_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Placebo">pct_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug 1">pct_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug-1">pct_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_up_Placebo">ci_up_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_up_Drug 1">ci_up_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_up_Drug-1">ci_up_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Placebo">ci_low_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Drug 1">ci_low_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Drug-1">ci_low_Drug 1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="or">or</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="or_ci_low">or_ci_low</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="or_ci_up">or_ci_up</th>
@@ -5633,12 +5648,12 @@ adding tab spanners with <code><a href="../reference/tab_spanner.html">tab_spann
 <td colspan="7" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Occurence of Event per Subgroup - {gt} Analysis Set</td>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
-<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="Age Group">Age Group</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="AAGEGR1">Age Group</th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Placebo">
-        <span class="gt_column_spanner">Placebo</span>
+        <div class="gt_column_spanner">Placebo</div>
       </th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Drug 1">
-        <span class="gt_column_spanner">Drug 1</span>
+        <div class="gt_column_spanner">Drug 1</div>
       </th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="or">or</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="or_ci_low">or_ci_low</th>
@@ -5646,8 +5661,8 @@ adding tab spanners with <code><a href="../reference/tab_spanner.html">tab_spann
 <tr class="gt_col_headings">
 <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Placebo">n_resp_Placebo</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Placebo">ci_low_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Drug 1">n_resp_Drug 1</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Drug 1">ci_low_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Drug-1">n_resp_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Drug-1">ci_low_Drug 1</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -6143,12 +6158,12 @@ label <em>Age</em>.</p>
 <td colspan="7" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Occurence of Event per Subgroup - {gt} Analysis Set</td>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
-<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="Age Group">Age Group</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="AAGEGR1">Age Group</th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Placebo">
-        <span class="gt_column_spanner">Placebo</span>
+        <div class="gt_column_spanner">Placebo</div>
       </th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Drug 1">
-        <span class="gt_column_spanner">Drug 1</span>
+        <div class="gt_column_spanner">Drug 1</div>
       </th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="or">or</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" scope="col" id="or_ci_low">or_ci_low</th>
@@ -6156,8 +6171,8 @@ label <em>Age</em>.</p>
 <tr class="gt_col_headings">
 <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Placebo">n_resp_Placebo</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Placebo">ci_low_Placebo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Drug 1">n_resp_Drug 1</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Drug 1">ci_low_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_resp_Drug-1">n_resp_Drug 1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ci_low_Drug-1">ci_low_Drug 1</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -6667,7 +6682,7 @@ column.</p>
   height: 0px !important;
 }
 </style>
-<table class="table gt_table" style="table-layout: fixed;; width: 0px" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="table gt_table" style="table-layout:fixed;width:0px;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width:80px;">
 <col style="width:120px;">
@@ -6685,21 +6700,21 @@ column.</p>
 <td colspan="7" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Occurence of Event per Subgroup - {gt} Analysis Set</td>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="AAGEGR1"></th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Placebo">
-        <span class="gt_column_spanner">Placebo</span>
+        <div class="gt_column_spanner">Placebo</div>
       </th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Drug 1">
-        <span class="gt_column_spanner">Drug 1</span>
+        <div class="gt_column_spanner">Drug 1</div>
       </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="Odds ratio">Odds ratio</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="[95% CI]">[95% CI]</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="or">Odds ratio</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="or_ci_low">[95% CI]</th>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Event Rate (%)">Event Rate (%)</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="[95% CI]">[95% CI]</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Event Rate (%)">Event Rate (%)</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="[95% CI]">[95% CI]</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="n_resp_Placebo">Event Rate (%)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="ci_low_Placebo">[95% CI]</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="n_resp_Drug-1">Event Rate (%)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="ci_low_Drug-1">[95% CI]</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -7194,7 +7209,7 @@ letters, we add <code>tab_options(footnote.marks = letters)</code>.</p>
   height: 0px !important;
 }
 </style>
-<table class="table gt_table" style="table-layout: fixed;; width: 0px" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="table gt_table" style="table-layout:fixed;width:0px;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width:80px;">
 <col style="width:120px;">
@@ -7212,22 +7227,22 @@ letters, we add <code>tab_options(footnote.marks = letters)</code>.</p>
 <td colspan="7" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>x.x.x: Occurence of Event per Subgroup - {gt} Analysis Set</td>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="AAGEGR1"></th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Placebo">
-        <span class="gt_column_spanner">Placebo</span>
+        <div class="gt_column_spanner">Placebo</div>
       </th>
       <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Drug 1">
-        <span class="gt_column_spanner">Drug 1</span>
+        <div class="gt_column_spanner">Drug 1</div>
       </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="Odds ratio">Odds ratio</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="[95% CI]">[95% CI]</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="or">Odds ratio</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" scope="col" id="or_ci_low">[95% CI]</th>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Event Rate (%)">Event Rate (%)</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id='[95% CI]&lt;span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"&gt;&lt;sup&gt;a&lt;/sup&gt;&lt;/span&gt;'>[95% CI]<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>a</sup></span>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="n_resp_Placebo">Event Rate (%)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="ci_low_Placebo">[95% CI]<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>a</sup></span>
 </th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Event Rate (%)">Event Rate (%)</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id='[95% CI]&lt;span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"&gt;&lt;sup&gt;a&lt;/sup&gt;&lt;/span&gt;'>[95% CI]<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>a</sup></span>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="n_resp_Drug-1">Event Rate (%)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="ci_low_Drug-1">[95% CI]<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>a</sup></span>
 </th>
     </tr>
 </thead>
@@ -7256,7 +7271,7 @@ letters, we add <code>tab_options(footnote.marks = letters)</code>.</p>
 </tbody>
 <tfoot class="gt_footnotes"><tr>
 <td class="gt_footnote" colspan="7">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>a</sup></span> Event rate 95% exact confidence interval uses the Clopper−Pearson method.</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>a</sup></span> Event rate 95% exact confidence interval uses the Clopper−Pearson method.</td>
     </tr></tfoot>
 </table>
 </div>
@@ -7339,7 +7354,7 @@ need to apply some data wrangling with functions from
 <span>    names_from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">TRTA</span>, <span class="va">CRIT1FL</span><span class="op">)</span>,</span>
 <span>    values_from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">n</span>, <span class="va">pct</span><span class="op">)</span></span>
 <span>  <span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="fu">across</span><span class="op">(</span><span class="fu">where</span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span>, <span class="fl">0</span>, <span class="va">.</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="fu">across</span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html" class="external-link">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, <span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span>, <span class="fl">0</span>, <span class="va">.</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/add_row.html" class="external-link">add_row</a></span><span class="op">(</span>PARAM <span class="op">=</span> <span class="st">"Subjects with at least:"</span>, .before <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">addv_sum</span></span>
@@ -7827,16 +7842,16 @@ need to apply some data wrangling with functions from
 <td colspan="10" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>xx.x.x: Major Protocol Deviations and Relationship to COVID-19 - ITT Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="PARCAT1">PARCAT1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_N">n_Placebo_N</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_Y">n_Placebo_Y</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug 1_N">n_Drug 1_N</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug 1_Y">n_Drug 1_Y</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_N">n_Drug 1_N</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_Y">n_Drug 1_Y</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Placebo_N">pct_Placebo_N</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Placebo_Y">pct_Placebo_Y</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug 1_N">pct_Drug 1_N</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug 1_Y">pct_Drug 1_Y</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug-1_N">pct_Drug 1_N</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug-1_Y">pct_Drug 1_Y</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -7948,7 +7963,7 @@ the job for us).</p>
 <span>  <span class="fu"><a href="../reference/row_group_order.html">row_group_order</a></span><span class="op">(</span>groups <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="st">" "</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="../reference/summary_rows.html">summary_rows</a></span><span class="op">(</span></span>
 <span>    groups <span class="op">=</span> <span class="st">" "</span>,</span>
-<span>    columns <span class="op">=</span> <span class="fu">where</span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>,</span>
+<span>    columns <span class="op">=</span> <span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html" class="external-link">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>,</span>
 <span>    fns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>label <span class="op">=</span> <span class="st">"Study Procedure Deviations"</span>, fn <span class="op">=</span> <span class="st">"sum"</span><span class="op">)</span>,</span>
 <span>    side <span class="op">=</span> <span class="st">"top"</span></span>
 <span>  <span class="op">)</span></span>
@@ -8412,21 +8427,21 @@ the job for us).</p>
 <td colspan="10" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>xx.x.x: Major Protocol Deviations and Relationship to COVID-19 - ITT Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="PARCAT1">PARCAT1</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_N">n_Placebo_N</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_Y">n_Placebo_Y</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug 1_N">n_Drug 1_N</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug 1_Y">n_Drug 1_Y</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_N">n_Drug 1_N</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_Y">n_Drug 1_Y</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Placebo_N">pct_Placebo_N</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Placebo_Y">pct_Placebo_Y</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug 1_N">pct_Drug 1_N</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug 1_Y">pct_Drug 1_Y</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug-1_N">pct_Drug 1_N</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug-1_Y">pct_Drug 1_Y</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="gt_group_heading_row">
-<th colspan="10" class="gt_empty_group_heading" scope="colgroup" id=""></th>
+<th colspan="10" class="gt_empty_group_heading" scope="colgroup"></th>
     </tr>
 <tr class="gt_row_group_first">
 <th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">Subjects with at least:</th>
@@ -8997,20 +9012,20 @@ generation of the row group. We can hide this column now using
 <td colspan="9" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>xx.x.x: Major Protocol Deviations and Relationship to COVID-19 - ITT Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_N">n_Placebo_N</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_Y">n_Placebo_Y</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug 1_N">n_Drug 1_N</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug 1_Y">n_Drug 1_Y</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_N">n_Drug 1_N</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_Y">n_Drug 1_Y</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Placebo_N">pct_Placebo_N</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Placebo_Y">pct_Placebo_Y</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug 1_N">pct_Drug 1_N</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug 1_Y">pct_Drug 1_Y</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug-1_N">pct_Drug 1_N</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="pct_Drug-1_Y">pct_Drug 1_Y</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="gt_group_heading_row">
-<th colspan="9" class="gt_empty_group_heading" scope="colgroup" id=""></th>
+<th colspan="9" class="gt_empty_group_heading" scope="colgroup"></th>
     </tr>
 <tr class="gt_row_group_first">
 <th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">Subjects with at least:</th>
@@ -9596,16 +9611,16 @@ intervention group and COVID-19 relationship flag.</p>
 <td colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>xx.x.x: Major Protocol Deviations and Relationship to COVID-19 - ITT Set</td>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_N">n_Placebo_N</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_Y">n_Placebo_Y</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug 1_N">n_Drug 1_N</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug 1_Y">n_Drug 1_Y</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_N">n_Drug 1_N</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_Y">n_Drug 1_Y</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="gt_group_heading_row">
-<th colspan="5" class="gt_empty_group_heading" scope="colgroup" id=""></th>
+<th colspan="5" class="gt_empty_group_heading" scope="colgroup"></th>
     </tr>
 <tr class="gt_row_group_first">
 <th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">Subjects with at least:</th>
@@ -10165,40 +10180,40 @@ and create a cascade of column spanners.</p>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
 <th rowspan="1" colspan="1" scope="col"></th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;Placebo&lt;br /&gt;
-N=90 (100%)&lt;br /&gt;
-n (%)&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">Placebo<br>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="Placebo  
+  N=90 (100%)  
+   n (%)">
+        <div class="gt_column_spanner"><span class="gt_from_md">Placebo<br>
 N=90 (100%)<br>
-n (%)</span></span>
+n (%)</span></div>
       </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;Drug 1&lt;br /&gt;
-N=90 (100%)&lt;br /&gt;
-n (%)&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">Drug 1<br>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="Drug 1  
+  N=90 (100%)  
+   n (%)">
+        <div class="gt_column_spanner"><span class="gt_from_md">Drug 1<br>
 N=90 (100%)<br>
-n (%)</span></span>
+n (%)</span></div>
       </th>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id=""></th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;COVID-19 Related&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></span>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="a::stub"></th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="cov_pla">
+        <div class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></div>
       </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;COVID-19 Related&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></span>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="cov_dru">
+        <div class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></div>
       </th>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Yes">Yes</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="No">No</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Yes">Yes</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="No">No</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_Y">Yes</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_N">No</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_Y">Yes</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_N">No</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="gt_group_heading_row">
-<th colspan="5" class="gt_empty_group_heading" scope="colgroup" id=""></th>
+<th colspan="5" class="gt_empty_group_heading" scope="colgroup"></th>
     </tr>
 <tr class="gt_row_group_first">
 <th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">Subjects with at least:</th>
@@ -10735,40 +10750,40 @@ than one PD during the course of the study. The footnote is added with
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
 <th rowspan="1" colspan="1" scope="col"></th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;Placebo&lt;br /&gt;
-N=90 (100%)&lt;br /&gt;
-n (%)&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">Placebo<br>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="Placebo  
+  N=90 (100%)  
+   n (%)">
+        <div class="gt_column_spanner"><span class="gt_from_md">Placebo<br>
 N=90 (100%)<br>
-n (%)</span></span>
+n (%)</span></div>
       </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;Drug 1&lt;br /&gt;
-N=90 (100%)&lt;br /&gt;
-n (%)&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">Drug 1<br>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="Drug 1  
+  N=90 (100%)  
+   n (%)">
+        <div class="gt_column_spanner"><span class="gt_from_md">Drug 1<br>
 N=90 (100%)<br>
-n (%)</span></span>
+n (%)</span></div>
       </th>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id=""></th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;COVID-19 Related&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></span>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="a::stub"></th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="cov_pla">
+        <div class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></div>
       </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;COVID-19 Related&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></span>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="cov_dru">
+        <div class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></div>
       </th>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Yes">Yes</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="No">No</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Yes">Yes</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="No">No</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_Y">Yes</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Placebo_N">No</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_Y">Yes</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="n_Drug-1_N">No</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="gt_group_heading_row">
-<th colspan="5" class="gt_empty_group_heading" scope="colgroup" id=""></th>
+<th colspan="5" class="gt_empty_group_heading" scope="colgroup"></th>
     </tr>
 <tr class="gt_row_group_first">
 <th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">Subjects with at least:</th>
@@ -10778,7 +10793,7 @@ n (%)</span></span>
 <td headers="NA stub_1_1 n_Drug 1_N" class="gt_row gt_right"><br></td>
 </tr>
 <tr>
-<th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">At least one major Protocol Deviation<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span>
+<th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">At least one major Protocol Deviation<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span>
 </th>
 <td headers="NA stub_1_2 n_Placebo_Y" class="gt_row gt_right">15 (16.7)</td>
 <td headers="NA stub_1_2 n_Placebo_N" class="gt_row gt_right">24 (26.7)</td>
@@ -10833,7 +10848,7 @@ n (%)</span></span>
 </tbody>
 <tfoot class="gt_footnotes"><tr>
 <td class="gt_footnote" colspan="5">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span> Subjects can have more than one Protocol Deviation throughout the study.</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> Subjects can have more than one Protocol Deviation throughout the study.</td>
     </tr></tfoot>
 </table>
 </div>
@@ -11315,40 +11330,40 @@ PDs.</p>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
 <th rowspan="1" colspan="1" scope="col"></th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;Placebo&lt;br /&gt;
-N=90 (100%)&lt;br /&gt;
-n (%)&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">Placebo<br>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="Placebo  
+  N=90 (100%)  
+   n (%)">
+        <div class="gt_column_spanner"><span class="gt_from_md">Placebo<br>
 N=90 (100%)<br>
-n (%)</span></span>
+n (%)</span></div>
       </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;Drug 1&lt;br /&gt;
-N=90 (100%)&lt;br /&gt;
-n (%)&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">Drug 1<br>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center; text-align: center;" scope="colgroup" id="Drug 1  
+  N=90 (100%)  
+   n (%)">
+        <div class="gt_column_spanner"><span class="gt_from_md">Drug 1<br>
 N=90 (100%)<br>
-n (%)</span></span>
+n (%)</span></div>
       </th>
     </tr>
 <tr class="gt_col_headings gt_spanner_row">
-<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id=""></th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;COVID-19 Related&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></span>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="a::stub"></th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="cov_pla">
+        <div class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></div>
       </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="&lt;span class='gt_from_md'&gt;COVID-19 Related&lt;/span&gt;">
-        <span class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></span>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" style="text-align: center;" scope="colgroup" id="cov_dru">
+        <div class="gt_column_spanner"><span class="gt_from_md">COVID-19 Related</span></div>
       </th>
     </tr>
 <tr class="gt_col_headings">
-<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Yes">Yes</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="No">No</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Yes">Yes</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="No">No</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="n_Placebo_Y">Yes</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="n_Placebo_N">No</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="n_Drug-1_Y">Yes</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="n_Drug-1_N">No</th>
     </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="gt_group_heading_row">
-<th colspan="5" class="gt_empty_group_heading" scope="colgroup" id=""></th>
+<th colspan="5" class="gt_empty_group_heading" scope="colgroup"></th>
     </tr>
 <tr class="gt_row_group_first">
 <th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">Subjects with at least:</th>
@@ -11358,7 +11373,7 @@ n (%)</span></span>
 <td headers="NA stub_1_1 n_Drug 1_N" class="gt_row gt_center"><br></td>
 </tr>
 <tr>
-<th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">At least one major Protocol Deviation<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span>
+<th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">At least one major Protocol Deviation<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span>
 </th>
 <td headers="NA stub_1_2 n_Placebo_Y" class="gt_row gt_center">15 (16.7)</td>
 <td headers="NA stub_1_2 n_Placebo_N" class="gt_row gt_center">24 (26.7)</td>
@@ -11413,7 +11428,7 @@ n (%)</span></span>
 </tbody>
 <tfoot class="gt_footnotes"><tr>
 <td class="gt_footnote" colspan="5">
-<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height: 0;"><sup>1</sup></span> Subjects can have more than one Protocol Deviation throughout the study.</td>
+<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> Subjects can have more than one Protocol Deviation throughout the study.</td>
     </tr></tfoot>
 </table>
 </div>
@@ -11429,7 +11444,7 @@ n (%)</span></span>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>
